@@ -1,0 +1,119 @@
+/* ============================================================
+   CARAVELA COFFEE · DESIGN TOKENS
+   Extraídos el 12 de agosto de 2026
+   Fuentes:
+     · Muestreo por píxel del logo oficial (caravelaIcon)
+     · Valores literales en el marcado de caravela.coffee
+     · Tokens Tailwind expuestos en las clases del sitio
+   ============================================================ */
+
+:root {
+
+  /* ---------- MARCA ----------
+     Origen VERIFICADO. No sustituir por aproximaciones. */
+
+  --olive:      #4E4E24;  /* MUESTREADO del logo: 25,7% de los píxeles opacos.
+                             Color de marca principal. Tailwind: bg-brown */
+  --gold:       #D6BE5C;  /* LITERAL en el sitio: style="color:#D6BE5C"
+                             Tailwind: bg-yellow */
+  --pink:       #E0B2BB;  /* LITERAL en el sitio: style="color:#E0B2BB"
+                             Tailwind: bg-pink */
+  --terra:      #DB8358;  /* LITERAL en el sitio: style="color:#DB8358"
+                             Usado en "Making Coffee Better". Tailwind: bg-orange */
+
+  /* ---------- DERIVADOS DE MARCA ----------
+     Calculados desde los verificados. Ajustables. */
+
+  --olive-d:    #3A3A1B;  /* olivo -20% luminosidad: fondos profundos, pie */
+  --olive-l:    #6B6B33;  /* olivo +18%: bordes, estados intermedios */
+  --olive-xl:   #8A8A55;  /* olivo +40%: texto deshabilitado sobre oscuro */
+  --gold-d:     #A38A2E;  /* dorado oscurecido: legible sobre crema */
+  --terra-d:    #B5642F;  /* terracota oscurecido: legible sobre crema */
+  --sage:       #B7C4A0;  /* verde suave. Tailwind: green-20 / green-30 */
+  --sage-d:     #5C6E42;  /* sage oscurecido: texto de estado positivo */
+
+  /* ---------- SUPERFICIES ---------- */
+
+  --cream:      #F7F4E9;  /* fondo principal claro. Tailwind: bg-main */
+  --cream-2:    #EFE9D8;  /* fondo alterno, pistas de gráfico. bg-main-light */
+  --white:      #FFFDF7;  /* tarjetas sobre crema. Blanco cálido, no puro */
+
+  /* ---------- TEXTO ---------- */
+
+  --ink:        #2A2A14;  /* texto principal, derivado del olivo */
+  --txt:        #3D3D28;  /* texto de cuerpo */
+  --txt-2:      #78785F;  /* texto secundario, etiquetas */
+  --txt-3:      #A3A38C;  /* pistas, metadatos, notas de fuente */
+
+  /* ---------- BORDES ---------- */
+
+  --bdr:        #DDD6C0;  /* borde estándar */
+  --bdr-2:      #C8C0A6;  /* borde en hover */
+
+  /* ---------- SEMÁNTICOS ---------- */
+
+  --risk-high:  #C2543A;  /* riesgo alto. Terracota desaturado, no rojo puro */
+  --risk-med:   #D6BE5C;  /* riesgo medio: reutiliza el dorado */
+  --risk-low:   #B7C4A0;  /* riesgo bajo: reutiliza el sage */
+
+  /* ---------- TIPOGRAFÍA ----------
+     El sitio usa font-bayard (display, siempre mayúsculas), font-robotoc
+     (Roboto Condensed) y font-vtcmarsha. Bayard NO está en Google Fonts.
+     Archivo 800-900 es la sustitución más fiel: geométrica, condensable. */
+
+  --font-display: 'Archivo', 'Roboto Condensed', system-ui, sans-serif;
+  --font-body:    'DM Sans', system-ui, -apple-system, sans-serif;
+  --font-mono:    'DM Mono', ui-monospace, 'SF Mono', monospace;
+
+  --fs-h1:   clamp(34px, 6.4vw, 74px);
+  --fs-h2:   clamp(27px, 4.1vw, 46px);
+  --fs-h3:   clamp(17px, 2vw, 21px);
+  --fs-lead: clamp(16px, 1.9vw, 20px);
+  --fs-body: 16px;
+  --fs-sm:   13px;
+  --fs-note: 11.5px;
+  --fs-label: 10px;
+
+  --lh-tight: 1.06;
+  --lh-body:  1.65;
+  --ls-display: -0.02em;
+  --ls-label:    0.11em;
+
+  /* ---------- ESPACIADO ----------
+     Base 8. El sitio de Caravela usa secciones a pantalla completa. */
+
+  --sp-1:  8px;
+  --sp-2:  16px;
+  --sp-3:  24px;
+  --sp-4:  32px;
+  --sp-6:  48px;
+  --sp-8:  64px;
+  --sp-section: clamp(64px, 9vw, 120px);
+  --sp-gutter:  clamp(20px, 5vw, 64px);
+  --max-w: 1120px;
+
+  /* ---------- FORMA ----------
+     Caravela NO usa esquinas redondeadas en bloques grandes.
+     Los bloques de color del sitio son rectángulos puros. */
+
+  --radius-0:  0;      /* tarjetas y bloques de sección: SIN radio */
+  --radius-sm: 4px;    /* etiquetas y píldoras */
+  --radius-full: 999px;/* avatares y puntos */
+
+  /* ---------- MOVIMIENTO ----------
+     Replicado del marcado real de caravela.coffee */
+
+  --dur-fade:   1200ms;  /* transition-opacity ease-in duration-[1200ms] */
+  --dur-slide:  1000ms;
+  --dur-micro:   220ms;
+  --ease-in:    cubic-bezier(.4, 0, .2, 1);
+  --ease-out:   cubic-bezier(.2, .7, .3, 1);
+  --slide-from: -100%;   /* el sitio entra con translate-x desde -100% */
+
+  /* ---------- MARCA DE AGUA ----------
+     El sitio rota el recurso 30 grados con escala X invertida */
+
+  --wm-opacity:  0.05;
+  --wm-rotate:   28deg;
+  --wm-scale-x:  -1;
+}
